@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            width: 600px;
+            height: 200px;
+            margin: 10px auto;
+            border: 1px solid #aaa;
+
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"></div>
+
+    <button id='show'>show</button>
+    <button id='hide'>hide</button>
+
+
+    <script src="load-icon.js"></script>
+
+    <script>
+        document.querySelector('#hide').addEventListener('click', function () {
+            // 关闭icon
+            hideLoading('.container')
+        })
+        document.querySelector('#show').addEventListener('click', function () {
+            // 显示icon
+            showLoading({
+                container: '.container',// 父容器名称，需要定位
+                size: 30,// icon大小，默认30
+                color: '#007accdc'// icon颜色，默认#007accdc
+            })
+        })
+
+    </script>
+</body>
+
+</html>
