@@ -17,7 +17,7 @@ const showLoading = function (conf) {
     const color = conf.color || '#007accdc'
     const type = conf.type || 'circle'
 
-    const container = conf.container
+    const container = conf.container || 'body'
 
     hideLoading(container)
     // 设置HTML
