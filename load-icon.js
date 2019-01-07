@@ -2,7 +2,8 @@
  * 关闭icon
  * @param string container 父容器的名字
  */
-const hideLoading = function (container) {
+const hideLoading = function (container = 'body') {
+
     let iconEle = document.querySelector(`${container} .load-icon`)
     iconEle && document.querySelector(container).removeChild(iconEle)
 }
