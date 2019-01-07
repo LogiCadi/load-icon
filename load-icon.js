@@ -39,7 +39,7 @@ const showLoading = function (conf) {
 
         document.querySelectorAll('.ball').forEach((item, index) => {
             item.style.cssText = `width:100%;height:40%;background-color:${color};border-radius:50%;`
-            item.style.cssText += `transform: scale(${.64 - index * .03});`
+            item.style.cssText += `transform: scale(${.48 - index * .01});`
         })
         // 动画
         document.styleSheets[0].insertRule(`@keyframes rotate{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}`, 0);
@@ -55,7 +55,7 @@ const showLoading = function (conf) {
 
         document.querySelectorAll('.ball').forEach((item, index) => {
             item.style.cssText = `width:100%;height:100%;background-color:${color};border-radius:50%;`
-            item.style.cssText += `transform: scale(${.18 - index * .01});`
+            item.style.cssText += `transform: scale(${.16 - index * .01});`
         })
         // 动画
         document.styleSheets[0].insertRule(`@keyframes translation{0%{transform:translateX(-200%);}50%{transform:translateX(450%);}100%{transform:translateX(1100%);}}`, 0);
