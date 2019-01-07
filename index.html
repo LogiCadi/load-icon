@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <!-- <link rel="stylesheet" href="load-icon-horizon.css"> -->
     <title>Document</title>
     <style>
         body {
@@ -25,28 +25,58 @@
 
 <body>
 
-    <div class="container"></div>
+    <div class="container">
+        <!-- <div class="load-icon">
+            <div class="line line-1">
+                <div class="ball"></div>
+            </div>
+            <div class="line line-2">
+                <div class="ball"></div>
+            </div>
+            <div class="line line-3">
+                <div class="ball"></div>
+            </div>
+            <div class="line line-4">
+                <div class="ball"></div>
+            </div>
+            <div class="line line-5">
+                <div class="ball"></div>
+            </div>
+            <div class="line line-6">
+                <div class="ball"></div>
+            </div>
+        </div> -->
+    </div>
 
-    <button id='show'>show</button>
+    <button id='show-circle'>circle</button>
+    <button id='show-horizon'>horizon</button>
     <button id='hide'>hide</button>
 
-
-    <script src="https://logicadi.github.io/load-icon/load-icon.js"></script>
+    <script src="load-icon.js"></script>
 
     <script>
         document.querySelector('#hide').addEventListener('click', function () {
             // 关闭icon
             hideLoading('.container')
         })
-        document.querySelector('#show').addEventListener('click', function () {
+        document.querySelector('#show-circle').addEventListener('click', function () {
             // 显示icon
             showLoading({
                 container: '.container',// 父容器名称，需要定位
                 size: 30,// icon大小，默认30
-                color: '#007accdc'// icon颜色，默认#007accdc
+                color: '#007accdc',// icon颜色，默认#007accdc
+                type: 'circle'
             })
         })
-
+        document.querySelector('#show-horizon').addEventListener('click', function () {
+            // 显示icon
+            showLoading({
+                container: '.container',// 父容器名称，需要定位
+                size: 30,// icon大小，默认30
+                color: '#007accdc',// icon颜色，默认#007accdc
+                type: 'horizon'
+            })
+        })
     </script>
 </body>
 

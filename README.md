@@ -12,7 +12,8 @@ css3 load icon
     showLoading({
         container: '.container',// 父容器名称，需要加定位
         size: 30,// icon大小，默认30
-        color: '#007accdc'// icon颜色，默认#007accdc
+        color: '#007accdc',// icon颜色，默认#007accdc
+        type:'circle'// 默认circle，可选circle和horizon
     })
     // 关闭icon
     hideLoading('.container')
