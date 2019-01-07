@@ -3,7 +3,6 @@
  * @param string container 父容器的名字
  */
 const hideLoading = function (container = 'body') {
-
     let iconEle = document.querySelector(`${container} .load-icon`)
     iconEle && document.querySelector(container).removeChild(iconEle)
 }
@@ -42,7 +41,7 @@ const showLoading = function (conf) {
             item.style.cssText += `transform: scale(${.48 - index * .01});`
         })
         // 动画
-        document.styleSheets[0].insertRule(`@keyframes rotate{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}`, 0);
+        document.styleSheets[0].insertRule(`@keyframes rotate{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}`, 0)
 
     } else if (type == 'horizon') {
         // 设置CSS
@@ -58,7 +57,7 @@ const showLoading = function (conf) {
             item.style.cssText += `transform: scale(${.16 - index * .01});`
         })
         // 动画
-        document.styleSheets[0].insertRule(`@keyframes translation{0%{transform:translateX(-200%);}50%{transform:translateX(450%);}100%{transform:translateX(1100%);}}`, 0);
+        document.styleSheets[0].insertRule(`@keyframes translation{0%{transform:translateX(-200%);}50%{transform:translateX(450%);}100%{transform:translateX(1100%);}}`, 0)
 
     }
 }
